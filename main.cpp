@@ -302,6 +302,10 @@ int main(){
                                   {4, 6, 1},
                                   {3, 5, 8}};
 
+    vector<vector<int>> impossible =  {{8, 1, 2},
+                                       {0, 4, 3},
+                                       {7, 6, 5}};
+
     checker.push_back(vector<int> (k-1, k-1));
 
     for(int i = 1; i < k*k; i++){
@@ -312,7 +316,7 @@ int main(){
 
     cout << endl << endl;
 
-    vector<vector<int>> test = test8;
+    vector<vector<int>> test = impossible;
 
     UniformCostSearch(test);
     AStar(test);
